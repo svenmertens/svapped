@@ -1,0 +1,27 @@
+size_t pivotColumn
+size_t pivotRow
+
+def getPivotColumn:
+	for all columns:
+		if lastElement < 0:
+			pivotColumn = lastElement
+			break
+
+def getPivotRow:
+	for all rows:
+		vector(rhs/column) // if columnValue != 0
+		for element in vector:
+			pivotRow = lowestRatioElement
+
+def standardizePivotRow(pivotRow, pivotColumn):
+	if matrix(pivotColumn, pivotRow) != 1:
+		for element in row:
+			element = element / matrix(pivotColumn, pivotRow)
+
+def tableauRowOperations(Matrix tableau, pivotRow, pivotColumn):
+	for row in tableau: // use reference
+		elementInPivotColumn = tableau(row, pivotColumn) 
+		if elementInPivotColumn  != 0:
+			additionFactor = elementInPivotColumn 
+			for element in row:
+				element = element - tableau(pivotRow, elementColumn)
